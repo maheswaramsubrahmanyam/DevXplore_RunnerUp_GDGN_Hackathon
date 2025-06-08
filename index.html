@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SSC_DEV_HACK - A Remarkable Journey to Victory</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .nav {
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .nav-logo {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .nav-logo:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-title {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-link {
+            color: #374151;
+            text-decoration: none;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-link:hover {
+            color: #2563eb;
+            background: #eff6ff;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: white;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, #2563eb 0%, #7c3aed 50%, #1e40af 100%);
+            opacity: 0.9;
+        }
+
+        .hero-pattern {
+            position: absolute;
+            inset: 0;
+            opacity: 0.2;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            padding: 0 1rem;
+            max-width: 64rem;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            display: block;
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            color: #bfdbfe;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.75rem 1.5rem;
+            background: #fbbf24;
+            color: #1f2937;
+            font-weight: 600;
+            border-radius: 2rem;
+            font-size: 1.125rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px rgba(251, 191, 36, 0.3);
+        }
+
+        .hero-description {
+            font-size: clamp(1.125rem, 3vw, 1.5rem);
+            color: #bfdbfe;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .hero-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 1rem 2rem;
+            background: white;
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 2rem;
+            font-size: 1.125rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-button:hover {
+            background: #f3f4f6;
+            transform: scale(1.05);
+        }
+
+        .hero-decoration {
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .hero-decoration-1 {
+            top: 5rem;
+            left: 2.5rem;
+            width: 5rem;
+            height: 5rem;
+            background: rgba(255, 255, 255, 0.1);
+            animation: pulse 2s infinite;
+        }
+
+        .hero-decoration-2 {
+            bottom: 8rem;
+            right: 4rem;
+            width: 4rem;
+            height: 4rem;
+            background: rgba(251, 191, 36, 0.2);
+            animation: bounce 2s infinite;
+        }
+
+        .hero-decoration-3 {
+            top: 50%;
+            left: 5rem;
+            width: 2rem;
+            height: 2rem;
+            background: rgba(168, 85, 247, 0.3);
+            animation: ping 2s infinite;
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #2563eb, #7c3aed);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+        }
+
+        .card {
+            background: white;
+            border-radius: 1.5rem;
+            padding: clamp(2rem, 6vw, 3rem);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);
+            transform: scale(1);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Grid Layouts */
+        .grid {
+            display: grid;
+            gap: 2rem;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+
+        .grid-4 {
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+
+        .grid-5 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        /* Team Section */
+        .team-section {
+            background: linear-gradient(135deg, #f9fafb, #eff6ff);
+        }
+
+        .team-member {
+            position: relative;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .team-lead-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+            background: #fbbf24;
+            color: #1f2937;
+            font-size: 0.875rem;
+            font-weight: 700;
+            padding: 0.5rem 0.75rem;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .team-image {
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover .team-image {
+            transform: scale(1.1);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-name {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            transition: color 0.3s ease;
+        }
+
+        .team-member:hover .team-name {
+            color: #2563eb;
+        }
+
+        .team-role {
+            color: #2563eb;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-college {
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .team-linkedin {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .team-linkedin:hover {
+            background: #1d4ed8;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            max-width: 72rem;
+            margin: 0 auto;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 2rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #2563eb, #7c3aed);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 1.5rem;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .timeline-content {
+            width: 100%;
+            margin-left: 4rem;
+        }
+
+        .timeline-card {
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-card:hover {
+            transform: translateY(-0.25rem);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Gallery */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-0.5rem);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .gallery-image {
+            width: 100%;
+            height: 16rem;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover .gallery-image {
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1f2937;
+            color: white;
+            padding: 4rem 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-logo {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+
+        .footer-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        .footer-subtitle {
+            color: #9ca3af;
+            font-size: 0.875rem;
+        }
+
+        /* Animations */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 53%, 80%, 100% { transform: translateY(0); }
+            40%, 43% { transform: translateY(-1rem); }
+            70% { transform: translateY(-0.5rem); }
+        }
+
+        @keyframes ping {
+            0% { transform: scale(1); opacity: 1; }
+            75%, 100% { transform: scale(2); opacity: 0; }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-title {
+                display: none;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .timeline-line {
+                left: 2rem;
+            }
+            
+            .timeline-dot {
+                left: 1.5rem;
+            }
+            
+            .timeline-content {
+                margin-left: 4rem;
+            }
+            
+            .grid-3, .grid-4, .grid-5 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .timeline-line {
+                left: 50%;
+                transform: translateX(-1px);
+            }
+            
+            .timeline-dot {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .timeline-content {
+                width: calc(50% - 2rem);
+                margin-left: 0;
+            }
+            
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-right: 2rem;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content {
+                margin-left: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/t_Logo overlay/v1736098848/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/SSClogo_mrxxd6.jpg" alt="SSC Logo" class="nav-logo">
+                    <span class="nav-title">Student Service Community</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#journey" class="nav-link">Journey</a>
+                    <a href="#hackathon" class="nav-link">Hackathon</a>
+                    <a href="#victory" class="nav-link">Victory</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-pattern"></div>
+        
+        <div class="hero-content">
+            <h1 class="hero-title">
+                SSC_DEV_HACK
+                <span class="hero-subtitle">A Remarkable Journey to Victory</span>
+            </h1>
+            
+            <div class="hero-badge">
+                🏆 2nd Prize Winners - DevXplore Hackathon 2025
+            </div>
+            
+            <p class="hero-description">
+                From train rides to team bonding, from challenges to triumph - 
+                discover how five passionate students turned their dreams into reality.
+            </p>
+            
+            <a href="#introduction" class="hero-button">
+                Read Our Story
+            </a>
+        </div>
+        
+        <div class="hero-decoration hero-decoration-1"></div>
+        <div class="hero-decoration hero-decoration-2"></div>
+        <div class="hero-decoration hero-decoration-3"></div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="introduction" class="section">
+        <div class="container">
+            <div class="card">
+                <h2 class="section-title">
+                    The Beginning of an 
+                    <span class="gradient-text">Epic Journey</span>
+                </h2>
+                
+                <div style="font-size: 1.125rem; line-height: 1.8; color: #374151;">
+                    <p style="font-size: 1.25rem; text-align: center; color: #6b7280; font-style: italic; margin-bottom: 1.5rem;">
+                        "Hackathons are not just competitions but incredible learning experiences, especially for newcomers."
+                    </p>
+                    
+                    <p style="margin-bottom: 1.5rem;">
+                        As the team lead of <strong>SSC_DEV_HACK</strong> and founder of the Student Service Community (SSC), 
+                        I embarked on a mission that went beyond winning. I wanted to ensure that my team members—most of 
+                        whom were first-timers—understood not just the technical aspects but also the essence of collaboration, 
+                        learning, and perseverance.
+                    </p>
+                    
+                    <p style="margin-bottom: 1.5rem;">
+                        This is the story of how we participated, learned, grew, and emerged victorious at the 
+                        <strong>DevXplore Hackathon 2k25</strong>, organized by GDG Nellore and sponsored by CAT Point. 
+                        It's a tale of five passionate students from different colleges who came together with a shared 
+                        vision and determination.
+                    </p>
+                    
+                    <div style="background: linear-gradient(135deg, #eff6ff, #f3e8ff); padding: 1.5rem; border-radius: 0.75rem; border-left: 4px solid #2563eb; margin-top: 1.5rem;">
+                        <p style="font-weight: 600; color: #1e40af; margin-bottom: 0.5rem;">What made this journey special?</p>
+                        <p style="color: #1e40af;">
+                            It wasn't just about the code we wrote or the solution we built. It was about the bonds we formed, 
+                            the challenges we overcame together, and the lessons we learned that will stay with us forever.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Timeline -->
+    <section id="journey" class="section">
+        <div class="container">
+            <h2 class="section-title">
+                Our Epic 
+                <span class="gradient-text">Journey</span>
+            </h2>
+            <p style="font-size: 1.25rem; color: #6b7280; max-width: 48rem; margin: 0 auto 4rem; text-align: center;">
+                From the first train ride to the final victory, every moment was a step towards our dreams.
+            </p>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: linear-gradient(135deg, #2563eb, #3b82f6);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div style="height: 2px; background: linear-gradient(90deg, #2563eb, #3b82f6);"></div>
+                            <div style="padding: 2rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                    <div style="background: linear-gradient(135deg, #2563eb, #3b82f6); color: white; padding: 0.75rem; border-radius: 50%; margin-right: 1rem;">🚂</div>
+                                    <div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937;">The Journey Begins</h3>
+                                        <div style="font-size: 0.875rem; color: #6b7280; font-weight: 500;">
+                                            January 2nd, 2025 • Morning • Machilipatnam
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="color: #374151; margin-bottom: 1rem;">Our adventure started with a packed train ride from Machilipatnam. No seats available, but our spirits were high!</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Managed to arrange upper berth for the girls
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Started team bonding with the 'Alphabet Game'
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Brainstormed our Virtual Shopping Assistant idea
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: linear-gradient(135deg, #7c3aed, #a855f7);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div style="height: 2px; background: linear-gradient(90deg, #7c3aed, #a855f7);"></div>
+                            <div style="padding: 2rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                    <div style="background: linear-gradient(135deg, #7c3aed, #a855f7); color: white; padding: 0.75rem; border-radius: 50%; margin-right: 1rem;">📍</div>
+                                    <div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937;">Arrival at Nellore</h3>
+                                        <div style="font-size: 0.875rem; color: #6b7280; font-weight: 500;">
+                                            January 3rd, 2025 • 2:45 AM • Nellore Railway Station
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="color: #374151; margin-bottom: 1rem;">Early morning arrival with immediate coordination for accommodation and venue logistics.</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Called Sathvik Bhayya for accommodation
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Waited 2.5 hours at railway station
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Took Rapido rides to Narayana Engineering College
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Victory Timeline Item -->
+                <div class="timeline-item">
+                    <div class="timeline-dot" style="background: linear-gradient(135deg, #fbbf24, #f59e0b);"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-card">
+                            <div style="height: 2px; background: linear-gradient(90deg, #fbbf24, #f59e0b);"></div>
+                            <div style="padding: 2rem;">
+                                <div style="display: flex; align-items: center; margin-bottom: 1rem;">
+                                    <div style="background: linear-gradient(135deg, #fbbf24, #f59e0b); color: white; padding: 0.75rem; border-radius: 50%; margin-right: 1rem;">🏆</div>
+                                    <div>
+                                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937;">Victory Achieved</h3>
+                                        <div style="font-size: 0.875rem; color: #6b7280; font-weight: 500;">
+                                            January 4th, 2025 • Evening • Award Ceremony
+                                        </div>
+                                    </div>
+                                </div>
+                                <p style="color: #374151; margin-bottom: 1rem;">Our hard work paid off with the 2nd prize and ₹20,000 cash reward!</p>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Secured 2nd place in DevXplore Hackathon
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Received ₹20,000 cash prize
+                                    </li>
+                                    <li style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; font-size: 0.875rem; color: #6b7280;">
+                                        <span style="width: 0.5rem; height: 0.5rem; background: #2563eb; border-radius: 50%; margin-right: 0.75rem; margin-top: 0.375rem; flex-shrink: 0;"></span>
+                                        Unanimously decided to donate to SSC
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Magic of Two Section -->
+            <div style="margin-top: 5rem; background: linear-gradient(135deg, #eff6ff, #f3e8ff); border-radius: 1.5rem; padding: clamp(2rem, 6vw, 3rem); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1);">
+                <h3 style="font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; text-align: center; color: #1f2937; margin-bottom: 2rem;">
+                    The Magic of 
+                    <span class="gradient-text">"Two"</span>
+                </h3>
+                
+                <div class="grid grid-5">
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">2nd</div>
+                        <div style="color: #374151; font-size: 0.875rem;">Started journey on the 2nd</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">2:00 AM</div>
+                        <div style="color: #374151; font-size: 0.875rem;">Reached Nellore at 2 AM</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">2nd Row</div>
+                        <div style="color: #374151; font-size: 0.875rem;">Sat in 2nd row in seminar hall</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">2nd Table</div>
+                        <div style="color: #374151; font-size: 0.875rem;">Worked at 2nd table in hackathon room</div>
+                    </div>
+                    <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 0.75rem; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">2nd Prize</div>
+                        <div style="color: #374151; font-size: 0.875rem;">Secured the 2nd prize!</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Meet Our 
+                    <span class="gradient-text">Dream Team</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #6b7280; max-width: 48rem; margin: 0 auto; line-height: 1.6;">
+                    A diverse blend of enthusiasm and freshness from different colleges, 
+                    united by passion and determination to make a difference.
+                </p>
+            </div>
+
+            <div class="grid grid-5" style="margin-bottom: 3rem;">
+                <!-- Team Lead -->
+                <div class="team-member">
+                    <div class="team-lead-badge">Team Lead</div>
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736101687/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/maheswaram_subrahmanyam_pgidvm.jpg" alt="Maheswaram Subrahmanyam" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Maheswaram Subrahmanyam</h3>
+                        <p class="team-role">Team Lead & SSC Founder</p>
+                        <p class="team-college">VKR VNB AGK Engineering College</p>
+                        <a href="https://www.linkedin.com/in/maheswaram-subrahmanyam-361238275/" target="_blank" class="team-linkedin">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-member">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736101674/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/WhatsApp_Image_2025-01-05_at_23.18.23_c4ff0445_tkktlj.jpg" alt="Kukkala Chandu Sri" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Kukkala Chandu Sri</h3>
+                        <p class="team-role">AIML Specialist</p>
+                        <p class="team-college">VKR VNB AGK Engineering College</p>
+                        <a href="https://www.linkedin.com/in/chandu-sri-a72b872b5" target="_blank" class="team-linkedin">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-member">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736101846/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/WhatsApp_Image_2025-01-05_at_23.43.10_d484c93d_tns1qs.jpg" alt="Maheswaram Nikhila" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Maheswaram Nikhila</h3>
+                        <p class="team-role">Cyber Security Expert</p>
+                        <p class="team-college">DVR & DR.HS MIC COLLEGE OF TECHNOLOGY</p>
+                        <a href="https://www.linkedin.com/in/nikhila-maheswaram-6a3b1b301/" target="_blank" class="team-linkedin">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-member">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736101676/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/WhatsApp_Image_2025-01-05_at_23.25.27_9469efc9_ywdkok.jpg" alt="Vallabi Nandini" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">Vallabi Nandini</h3>
+                        <p class="team-role">Data Analytics Specialist</p>
+                        <p class="team-college">DVR & DR.HS MIC COLLEGE OF TECHNOLOGY</p>
+                        <a href="https://www.linkedin.com/in/nandinivallabi22h71a5459" target="_blank" class="team-linkedin">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-member">
+                    <div style="position: relative; overflow: hidden;">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736105603/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/WhatsApp_Image_2025-01-06_at_01.03.05_b0193ba9_ofwkhk.jpg" alt="P Swaty" class="team-image">
+                    </div>
+                    <div class="team-info">
+                        <h3 class="team-name">P Swaty</h3>
+                        <p class="team-role">Java Developer</p>
+                        <p class="team-college">Santhiram Engineering College</p>
+                        <a href="https://www.linkedin.com/in/swathi-pokuri-607859312/" target="_blank" class="team-linkedin">
+                            LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Diversity Card -->
+            <div class="card" style="text-align: center; max-width: 64rem; margin: 0 auto;">
+                <h3 style="font-size: clamp(1.5rem, 4vw, 2rem); font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">
+                    The Power of Diversity
+                </h3>
+                <p style="font-size: 1.125rem; color: #374151; line-height: 1.7;">
+                    Despite their lack of prior hackathon experience, I was confident in their potential. 
+                    My goal was to help them understand what hackathons are all about—the brainstorming, 
+                    the execution, and the final presentation. It was a diverse team, not only in skills 
+                    but also in backgrounds, and this diversity became our greatest strength in tackling 
+                    the challenges ahead.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Event Gallery -->
+    <section class="section team-section">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <h2 class="section-title">
+                    Moments That 
+                    <span class="gradient-text">Defined Us</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #6b7280; max-width: 48rem; margin: 0 auto;">
+                    Every picture tells a story of dedication, teamwork, and the journey that led us to victory.
+                </p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736059652/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/IMG-20250103-WA0062_ikgz41.jpg" alt="DevXplore Signature Moment" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736059647/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/IMG-20250103-WA0024_ttje8v.jpg" alt="Jitendra Gupta Sir - Google Cloud Expert" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736104509/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/IMG-20250105-WA0015_xbl447.jpg" alt="CAT Point Team Mentorship" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736059670/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/IMG-20250105-WA0024_mdalk1.jpg" alt="Team Discussion & Brainstorming" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736103006/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/WhatsApp_Image_2025-01-06_at_00.14.56_0ff26235_ghqrok.jpg" alt="Team Collaboration in Action" class="gallery-image">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/v1736102788/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/IMG_20250104_175119_x8lwst.jpg" alt="Award Ceremony Victory" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Victory Section -->
+    <section id="victory" class="section" style="background: linear-gradient(135deg, #fffbeb, #fef3c7, #fecaca);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 4rem;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem; background: linear-gradient(135deg, #fbbf24, #f97316); color: white; border-radius: 50%; font-size: 2.5rem; margin-bottom: 2rem; animation: bounce 2s infinite;">
+                    🏆
+                </div>
+                <h2 class="section-title">
+                    Victory & 
+                    <span style="background: linear-gradient(135deg, #fbbf24, #f97316); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;">Beyond</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #6b7280; max-width: 48rem; margin: 0 auto;">
+                    Our journey culminated in victory, but the real reward was the decision that followed.
+                </p>
+            </div>
+
+            <!-- Victory Announcement -->
+            <div class="card" style="text-align: center; margin-bottom: 3rem;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 6rem; height: 6rem; background: linear-gradient(135deg, #fbbf24, #f97316); color: white; border-radius: 50%; font-size: 2rem; font-weight: 700; margin-bottom: 2rem;">
+                    2nd
+                </div>
+                
+                <h3 style="font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; color: #1f2937; margin-bottom: 1.5rem;">
+                    🏆 Second Place Victory!
+                </h3>
+                
+                <div class="grid grid-3" style="margin-bottom: 2rem;">
+                    <div style="padding: 1.5rem; border-radius: 1rem; background: #fffbeb; border: 2px solid #fbbf24;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #d97706; margin-bottom: 0.5rem;">₹20,000</div>
+                        <div style="color: #374151; font-weight: 600;">Cash Prize</div>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 1rem; background: #eff6ff; border: 2px solid #2563eb;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #2563eb; margin-bottom: 0.5rem;">5</div>
+                        <div style="color: #374151; font-weight: 600;">Certificates</div>
+                    </div>
+                    <div style="padding: 1.5rem; border-radius: 1rem; background: #f3e8ff; border: 2px solid #7c3aed;">
+                        <div style="font-size: 2rem; font-weight: 700; color: #7c3aed; margin-bottom: 0.5rem;">∞</div>
+                        <div style="color: #374151; font-weight: 600;">Memories</div>
+                    </div>
+                </div>
+                
+                <p style="font-size: 1.125rem; color: #374151; line-height: 1.6;">
+                    The moment our team name was announced for second place, the applause from the audience 
+                    was overwhelming. All our hard work, sleepless nights, and perseverance had paid off!
+                </p>
+            </div>
+
+            <!-- Donation Decision -->
+            <div style="background: linear-gradient(135deg, #10b981, #2563eb); border-radius: 1.5rem; padding: clamp(2rem, 6vw, 3rem); color: white; box-shadow: 0 25px 50px rgba(0, 0, 0, 0.1); text-align: center;">
+                <div style="display: inline-flex; align-items: center; justify-content: center; width: 4rem; height: 4rem; background: rgba(255, 255, 255, 0.2); border-radius: 50%; font-size: 2rem; margin-bottom: 2rem;">
+                    ❤️
+                </div>
+                
+                <h3 style="font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 700; margin-bottom: 1.5rem;">
+                    A Heartfelt Decision
+                </h3>
+                
+                <p style="font-size: 1.25rem; margin-bottom: 2rem; line-height: 1.6; opacity: 0.95;">
+                    In a unanimous and heartfelt decision, our entire team chose to donate the complete 
+                    prize money of ₹20,000 to the Student Service Community (SSC) to support its ongoing 
+                    social service activities.
+                </p>
+                
+                <div style="background: rgba(255, 255, 255, 0.2); border-radius: 0.75rem; padding: 1.5rem;">
+                    <p style="font-size: 1.125rem; font-weight: 600; font-style: italic; margin-bottom: 1rem;">
+                        "True victory lies not in what we gain, but in what we give back to make the world a better place."
+                    </p>
+                    <p style="opacity: 0.9;">- SSC_DEV_HACK Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- SSC Info -->
+                <div>
+                    <div class="footer-brand">
+                        <img src="https://res.cloudinary.com/dk6egvuyy/image/upload/t_Logo overlay/v1736098848/SSC_DEV_HACK_NELLORE_NARAYANA_ENG_CLG/SSClogo_mrxxd6.jpg" alt="SSC Logo" class="footer-logo">
+                        <div>
+                            <h3 class="footer-title">Student Service Community</h3>
+                            <p class="footer-subtitle">Making a difference together</p>
+                        </div>
+                    </div>
+                    <p style="color: #d1d5db; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Founded by Maheswaram Subrahmanyam, SSC is dedicated to social service 
+                        and community development through technology and collaboration.
+                    </p>
+                </div>
+
+                <!-- Contact Information -->
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Get in Touch</h4>
+                    <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="color: #60a5fa;">✉️</span>
+                            <a href="mailto:studentservicecommunity@gmail.com" style="color: #d1d5db; text-decoration: none;">
+                                studentservicecommunity@gmail.com
+                            </a>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <span style="color: #34d399;">📞</span>
+                            <a href="tel:+917569399294" style="color: #d1d5db; text-decoration: none;">
+                                +91 7569399294
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h4 style="font-size: 1.125rem; font-weight: 700; margin-bottom: 1.5rem;">Connect With Us</h4>
+                    <p style="color: #9ca3af; margin-bottom: 1.5rem;">Follow us on social media and stay updated!</p>
+                    <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <a href="https://whatsapp.com/channel/0029VaYTpyWJpe8oGde6sz3K" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; color: #d1d5db; text-decoration: none; padding: 0.5rem; background: #374151; border-radius: 0.5rem; transition: all 0.3s ease;">
+                            💬 WhatsApp Channel
+                        </a>
+                        <a href="https://chat.whatsapp.com/H3AgvLp9axaEb2WUBbI6a1" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; color: #d1d5db; text-decoration: none; padding: 0.5rem; background: #374151; border-radius: 0.5rem; transition: all 0.3s ease;">
+                            💬 WhatsApp Group
+                        </a>
+                        <a href="https://www.linkedin.com/in/student-service-community-ssc-7a70a52aa/" target="_blank" style="display: flex; align-items: center; gap: 0.75rem; color: #d1d5db; text-decoration: none; padding: 0.5rem; background: #374151; border-radius: 0.5rem; transition: all 0.3s ease;">
+                            🔗 LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div style="border-top: 1px solid #374151; padding-top: 2rem; display: flex; flex-direction: column; gap: 1rem; text-align: center;">
+                <div>
+                    <p style="color: #9ca3af;">
+                        © 2025 SSC_DEV_HACK. All rights reserved.
+                    </p>
+                    <p style="color: #6b7280; font-size: 0.875rem; margin-top: 0.25rem;">
+                        Founded by <strong style="color: white;">Maheswaram Subrahmanyam</strong>
+                    </p>
+                </div>
+                
+                <div>
+                    <p style="color: #9ca3af; font-size: 0.875rem;">
+                        Made with ❤️ for the community
+                    </p>
+                    <p style="color: #6b7280; font-size: 0.875rem; margin-top: 0.25rem;">
+                        DevXplore Hackathon 2025 Winners
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
